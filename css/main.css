@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header p {
+    font-size: 2em;
+    margin: 5%;
+}
+
+.btn-datos {
+    margin-left: 5%;
+    padding: 0.5em;
+    background-color: rgb(167, 198, 255);
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: 2px 2px;
+}
+
+.info-usuarios {
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+.info-usuarios ul{
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 2%;
+    border-radius: 2px;
+    box-shadow: 2px 2px;
+}
+
+.btn-datos:hover {
+    background-color: rgb(51, 115, 235);
+    color: white;
+    box-shadow: 2px 2px black;
+}
+
