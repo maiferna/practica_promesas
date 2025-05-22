@@ -13,30 +13,47 @@ const infoUsuario = document.querySelector('#infoUsuario');
 
 document.addEventListener("click", (ev) => {
     if (ev.target.matches('#btnDatos')) {
-        // crear promesa
+        getApi();
     }
 })
 
 
+
 /**
- * Funciones
+ * Función que simula la api
+ * La promesa resuelta devuelve un objeto con los datos del usuario
+ * @returns Devuelve una promesa
  */
 
-
 const api = () => {
+    let isOk = true;
+    const usuario = {nombre: 'Pepe', email: 'pepe@gmail.com'};
     const promise = new Promise((resolve, reject) => {
-        // setTiemout 2 segundos
-        // Variable true o false
-        // si es true resolver --> crear objeto
-        // si es false reject --> error
+        setTimeout(() => {
+            if (isOk) {
+                resolve(usuario);
+            } else {
+                reject('Error: No hay datos disponibles.')
+            }
+        }, 2000);
     })
+    return (promise);
 }
 
 
+/**
+ * Función que resuelve la promesa
+ */
+
 const getApi = () => {
-    // Llamar a api
-    // .then() --> pintarlista
-    // .catch --> error
+    api()
+        .then((resp) => {
+            //drawList();
+            console.log('resolve');
+        })
+        .catch((error) => {
+            console.log(error);
+        })
 }
 
 
