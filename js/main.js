@@ -30,7 +30,7 @@ const api = () => {
     const user = { name: 'Pepe', email: 'pepe@gmail.com' };
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (!isOk) {
+            if (isOk) {
                 resolve(user);
             } else {
                 reject('Error: No hay datos disponibles.')
@@ -53,6 +53,7 @@ const getApi = () => {
             drawList(resp);
         })
         .catch((error) => {
+            infoUsuario.textContent = 'No hay datos disponibles.'
             console.log(error);
         })
 }
