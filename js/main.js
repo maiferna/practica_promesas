@@ -4,6 +4,7 @@
  */
 
 const infoUsuario = document.querySelector('#infoUsuario');
+const infoParrafo = document.querySelector('#infoParrafo');
 
 
 
@@ -53,7 +54,7 @@ const getApi = () => {
             drawList(resp);
         })
         .catch((error) => {
-            infoUsuario.textContent = 'No hay datos disponibles.'
+            infoParrafo.textContent = 'No hay datos disponibles.'
             console.log(error);
         })
 }
